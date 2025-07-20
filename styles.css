@@ -1,0 +1,207 @@
+:root {
+    font-size: 10px;
+    --main-color: #d3ad7f;
+    --black: #131313;
+    --bg: 010103;
+    --border: 0.1rem solid rgba(255, 255, 255, 0.3);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: "Roboto", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.caixa-video {
+    position: fixed;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+}
+
+.caixa-video img{
+    min-height: 100%;
+    min-width: 100%;
+    position: fixed;
+    top: 0;
+}
+
+.mascara {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    background: linear-gradient(109deg, rgba(10, 12, 16, 0.99) 15%, rgba(10, 12, 16, 0.7) 50%, rgba(10, 12, 16, 0.99) 85%) ;
+}
+
+section{
+    padding: 3rem 2rem;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    background-color: black;
+    border-bottom: 0.1rem solid rgba(255, 255, 255, 0.3);
+    width: 100vw;
+}
+
+header section {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 50px;
+    padding: 1.5rem 0;
+    position: relative;
+}
+
+header section a img{
+    height: 6rem;
+}
+
+header section nav a{
+    margin: 0 1rem;
+    font-size: 1.8rem;
+    color: #fff;
+    transition: 0.3s linear;
+}
+
+header section nav a:hover{
+    color: var(--main-color);
+    border-bottom: 0.1rem solid var(--main-color);
+    padding-bottom: 0.5rem;
+}
+
+.caixa-principal {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.caixa-principal div{
+    max-width: 60rem;
+
+}
+
+.caixa-principal div h3 {
+    color: white;
+    font-size: 6rem;
+    text-transform: u;
+}
+
+.caixa-principal div p{
+    font-size: 2rem;
+    color: white;
+    font-weight: lighter;
+    padding: 1rem 0;
+    line-height: 1.8;
+}
+
+.caixa-principal div a{
+    background-color: var(--main-color);
+    cursor: pointer;
+    margin-top: 1rem;
+    display: inline-block;
+    font-size: 1.7rem;
+    color: white;
+    padding: 1rem 3rem;
+    border: none;
+
+}
+.titulo{
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+    font-size: 4rem;
+}
+
+.titulo span { 
+    color: var(--main-color);
+}
+
+.caixa-sobre .sobre-conteiner{
+    display: flex;
+    align-items: center;
+    background-color: var(--black);
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.caixa-sobre .sobre-conteiner .sobre-imagem{
+    flex: 1 1 45rem;
+}
+
+.caixa-sobre .sobre-conteiner .sobre-imagem img{
+    width: 100%;
+}
+
+.caixa-sobre .sobre-conteiner .sobre-texto{
+    flex: 1 1 45rem;
+    padding: 2rem;
+}
+
+.caixa-sobre .sobre-conteiner .sobre-texto h3{
+    font-size: 3rem;
+    color: #fff;
+
+}
+
+.caixa-sobre .sobre-conteiner .sobre-texto p{
+    font-size: 1.5rem;
+    font-weight: lighter;
+    color: #fff;
+    line-height: 1.8;
+    padding: 1rem 0;
+}
+
+.caixa-cardapio {
+    padding: 60px 20px;
+}
+
+.cardapio-conteiner {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.item-cardapio {
+    background-color: var(--black);
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    padding: 16px;
+    text-align: center;
+    width: 350px;
+}
+
+.item-cardapio img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+}
+
+.item-cardapio h3 {
+    font-size: 30px;
+    color: #d3ad7f;
+    margin: 10px 0 8px;
+}
+
+.item-cardapio p {
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    color: white;
+}
+
