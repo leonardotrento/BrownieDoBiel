@@ -11,7 +11,7 @@
 </head>
 <body>
     <div class="caixa-video">
-        <img src="img/todoscookies.JPG" alt="">
+        <img src="img/embalados.jpg" alt="">
         <div class="mascara"></div>
     </div>
     <header>
@@ -23,7 +23,7 @@
                 <a href="#home">Home</a>
                 <a href="#sobre">Sobre Nós</a>
                 <a href="#cardapio">Cardápio</a>
-                <a href="#">Contato</a>
+                <a href="#contatos">Contato</a>
             </nav>
         </section>
     </header>
@@ -31,8 +31,8 @@
         <section id="home" class="caixa-principal">
             <div>
                 <h3>Conheça o melhor brownie da região</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem reprehenderit corporis quidem nostrum incidunt consequatur iure at tempore, veniam culpa nam voluptate magni quae asperiores fugiat dolore dolores unde quisquam.</p>
-                <a class="botao-link" href="#">Peça o seu agora</a>
+                <p>Produzidos com ingredientes selecionados e muito carinho, nossos brownies conquistam pelo sabor, textura e aquele toque artesanal que faz toda a diferença.</p>
+                <a class="botao-link" href="#contatos">Peça o seu agora</a>
             </div>
         </section>
     </div>
@@ -40,14 +40,19 @@
         <h2 class="titulo"><span>Sobre</span> Nós</h2>
         <div class="sobre-conteiner">
             <div class="sobre-imagem">
-                <img src="img/embalados.jpg" alt="">
+                <img src="img/todoscookies.JPG" alt="">
             </div>
 
             <div class="sobre-texto">
-                <h3>O que torna o nosso brownie especial</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A sapiente enim quae laboriosam suscipit fugiat nihil, delectus praesentium consectetur unde consequatur eos deleniti tempore minima repudiandae tenetur odio aliquam qui. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut ad dolore sunt dolorem id odio maxime neque. Saepe reiciendis perspiciatis, nesciunt accusamus quisquam, iure, ipsam ab ratione iste deserunt laborum.</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor aspernatur ratione reiciendis eos enim sed architecto explicabo recusandae! Fuga, nemo. Quia perspiciatis eaque itaque. Molestiae harum consequatur quia facilis doloribus!</p>
+                <h3>O que torna o nosso brownie especial?</h3>
+                <p>
+                    No Brownie do Biel, cada pedaço é feito com atenção aos detalhes e muito amor. Usamos chocolate de alta qualidade, ingredientes selecionados e uma receita original desenvolvida para conquistar todos os paladares — dos amantes do chocolate intenso aos fãs de recheios cremosos.
+                </p>
+                <p>
+                    Nosso diferencial está na textura: casquinha crocante por fora, interior macio e sabor marcante. Além disso, valorizamos o feito à mão, com produção artesanal e o maximo de cuidado na hora de embalar o produto, para que cada cliente receba um brownie fresquinho, inesquecível e muito bem cuidado.
+                </p>
             </div>
+
         </div>
     </section>
 
@@ -78,9 +83,40 @@
             <p>Nossa grande novidade! Os bombons feitos com casquinha de brownie acompanham a cobertura de chocolate da sua escolha., </p>
         </div>
 
-        
     </div>
 </section>
+
+<section id="contatos" class="contatos">
+    <h2 class="contatos-titulos">Entre em contato</h2>
+    <form class="formulario-contato" id="formulario" onsubmit="enviarWhats(event)">
+        <div class="nome-form">
+            <input id="nome" placeholder="Nome" class="campo-form">
+        </div>
+        <div class="grupo-form">
+            <textarea id="mensagem" class="text-form" placeholder="Digite sua mensagem"></textarea>
+        </div>
+        <button type="submit" class="botao-form">Enviar WhatsApp</button>
+    </form>
+</section>
+
+<script>
+    function enviarWhats(event){
+        event.preventDefault()
+
+        const nome = document.getElementById('nome').value;
+        const mensagem = document.getElementById('mensagem').value;
+        const telefone = '554891292416'
+
+        const texto = `Olá! Me chamo ${nome}, ${mensagem}`
+        const msgFormatada = encodeURIComponent(texto)
+
+        const url = `https://wa.me/${telefone}?text=${msgFormatada}`
+
+        window.open(url, '_blank')
+
+    }
+    
+</script>
 
 </body>
 </html>
