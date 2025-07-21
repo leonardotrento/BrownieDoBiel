@@ -87,6 +87,14 @@ header section nav a:hover{
     padding-bottom: 0.5rem;
 }
 
+.caixa-principal {
+  padding-top: 150px;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+
 @media (max-width: 768px){
 .caixa-principal {
     margin-top: 100px;
